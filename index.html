@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Searcher</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="inner">
+            <a href="/" class="logo"></a>
+            <div class="search">
+                <input type="text" type="search" placeholder="찾으시는 영화를 영어로 적어주세요">
+            </div>
+            <button><div class="material-icons">search</div></button>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="inner">
+            <div class="nothingPage">
+                영화를 검색하세요
+            </div>
+
+            <div class="searchPage hidden">
+            </div>
+
+            <button class="hidden">영화리스트 더 불러오기</button>
+
+        </div>
+    </div>
+
+    <div class="detailPage hidden">
+        <div class="inner">
+            <div class="poster"><img src="" alt=""></div>
+            <div class="title"><span></span></div>
+            <div class="year"><span></span></div>
+            <button>X</button>
+        </div>
+    </div>
+
+
+</body>
+</html>

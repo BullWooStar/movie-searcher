@@ -1,0 +1,242 @@
+@mixin leftRightCenter {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+
+.hidden {
+    display: none !important;
+    height: 0;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+    line-height: 1.4;
+    color: #333;
+    position: relative;
+  }
+
+
+header {
+    border-bottom: 2px solid black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    .inner {
+        height: 100px;
+        width: 1100px;
+        @include leftRightCenter;
+        display: flex;
+        align-items: center;
+        
+            .logo {
+                width: 250px;
+                height: 100px;
+                background-image: url('/logo.png');
+                background-size: cover;
+            }
+
+            .search {
+                width: 600px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                margin-left: 50px;
+                    
+                input {
+                    width: 600px;
+                    height: 70px;
+                    border: 5px solid black;
+                    border-radius: 20px;
+                    font-size: 30px;
+                    padding-left: 20px;
+                    }
+            }
+
+            button {
+                width: 70px;
+                height: 70px;
+                border: none;
+                margin-left: 10px;
+                background-color: white;;
+                cursor: pointer;
+
+            &:hover {
+                color: red;
+            }    
+               .material-icons {
+                   font-size: 50px
+               }
+            }
+    }
+}
+
+.main {
+    width: 100%;
+    top: 100px;
+    position: relative;
+    padding-bottom: 100px;
+
+        
+        .inner {
+            width: 1100px;
+            @include leftRightCenter;
+            padding-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            
+                
+                .nothingPage {
+                    width: 1100px;
+                    padding-top: 250px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+
+                .searchPage {
+                    margin-top: 50px;
+                    width: 1100px;
+                    display: flex;
+                    flex-wrap: wrap;
+                
+                    
+                    .searchBox {
+                        display: flex;
+                        height: 200px;
+                        width: 300px;
+                        margin-right: 40px;
+                        margin-bottom: 40px;
+                        border: 1px solid black;
+                        position: relative;
+                        cursor: pointer;
+                        transition: .2s;
+                        background-color: antiquewhite;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                        
+
+                        .poster > img {
+                            height: 200px;
+                            width: 150px;
+                            object-fit: cover;
+                        }
+
+                        .title {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: 150px;
+                            height: 150px;
+                            font-size: 20px;
+                            overflow-wrap: break-word;
+                            & > div {
+                                margin: 10px;
+                                text-align: center;
+                            }
+                        }
+
+                        .year {
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            width: 150px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 20px;
+                            font-weight: 900;
+                            color: grey;
+                        }
+                    }
+                }
+
+                button {
+                    width: 200px;
+                    height: 50px;
+                    font-size: 18px;
+                    @include leftRightCenter;
+                    cursor: pointer;                    
+                }
+
+        }
+}
+
+
+.detailPage {
+    width: 900px;
+    height: 600px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 9;
+    border: 1px solid black;
+    background-color: white;
+        .inner{
+            position: relative;
+            width: 900px;
+            height: 600px;
+            .poster {
+                width: 450px;
+                height: 600px;
+                left: 0;
+                position: absolute;     
+                        img {
+                            height: 600px;
+                            width: 450px;
+                        }
+                    
+            }
+
+            .title {
+                width: 450px;
+                height: 500px;
+                right: 0;
+                top: 0;
+                position: absolute;
+                font-size: 40px;
+                font-weight: 900;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & > span {
+                    margin: 10px;
+                    word-break: normal;
+                    text-align: center;
+                }
+            }
+
+            .year {
+                width: 450px;
+                height: 100px;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                font-weight: 900;
+                color: grey;
+            }
+
+            button {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                font-size: 30px;
+                font-weight: 900;
+                right: 0;
+                top: 0;
+                cursor: pointer;
+            }
+        }
+}
